@@ -1,0 +1,474 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500&family=Bellefair&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  /*== Colors ==*/
+  --black: hsl(230, 35%, 7%);
+  --grey: hsl(231, 77%, 90%);
+  --white: hsl(0, 0%, 100%);
+  --dark-tinted-white: hsla(0, 0%, 100%, 0.05);
+  --light-tinted-white: hsla(0, 0%, 100%, 0.5);
+  --light-tinted-black: hsl(230, 35%, 7%, 0.1);
+  --dark-tinted-black: hsl(230, 35%, 7%, 0.75);
+  --dark-tinted-grey: hsl(231, 77%, 90%, 0.75;);
+
+  /*== Typography ==*/
+  --xxl-heading-fs: 150px;
+  --xl-heading-fs: 100px;
+  --lg-heading-fs: 56px;
+  --md-heading-fs: 32px;
+  --sm-heading-fs: 28px;
+  --lg-body-text-fs: 16px;
+  --md-body-text-fs: 14px;
+  --lg-xter-space: 4.75px;
+  --md-xter-space: 2.7px;
+  --sm-xter-space: 2.35px;
+  --barlow-condensed-ff: "Barlow Condensed", sans-serif;
+  --bellefair-ff: "Bellefair", serif;
+
+  /*-- calc(min-font-size + (max-font-size - min-font-size) * (100vw - min-screen-size) / (max-screen-size - min-screen-size)); --*/
+}
+
+/*
+=
+= 
+=
+=
+== UNIVERSAL STYLES (MOBILE FIRST) ==*/
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+li {
+  list-style: none;
+}
+.bold {
+  font-weight: 700;
+}
+.ff-barlow {
+  font-family: var(--barlow-condensed-ff);
+}
+.ff-bellefair {
+  font-family: var(--bellefair-ff);
+}
+.fsb-lg {
+  font-size: var(--lg-body-text-fs);
+}
+.fsb-md {
+  font-size: var(--md-body-text-fs);
+}
+.fsh-xxl {
+  font-size: var(--xxl-heading-fs);
+}
+.fsh-xl {
+  font-size: var(--xl-heading-fs);
+}
+.fsh-lg {
+  font-size: var(--lg-heading-fs);
+}
+.fsh-md {
+  font-size: var(--md-heading-fs);
+}
+.fsh-sm {
+  font-size: var(--sm-heading-fs);
+}
+.fc-grey {
+  color: var(--grey);
+}
+.fc-white {
+  color: var(--white);
+}
+.fc-black {
+  color: var(--black);
+}
+.cs-lg {
+  letter-spacing: var(--lg-xter-space);
+}
+.cs-md {
+  letter-spacing: var(--md-xter-space);
+}
+.cs-sm {
+  letter-spacing: var(--sm-xter-space);
+}
+html {
+  font-size: 16px;
+  width: 100%;
+  max-width: 1440px;
+}
+body {
+  font-size: 16px;
+  font-weight: normal;
+  height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/*== Header Section: Universal Styles (Mobile First) ==*/
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  position: relative;
+  margin: 2rem;
+}
+.nav__links {
+  background-color: var(--dark-tinted-black);
+  display: flex;
+  padding-top: 1.25rem;
+  padding-right: clamp(0.5rem, 7.5vw, 7.5rem);
+  padding-bottom: 0;
+  padding-left: min(3vw 0.5rem);
+}
+@supports (backdrop-filter: blur(2.5rem)) {
+  .nav__links {
+    background-color: var(--tinted-white);
+    backdrop-filter: blur(2.5rem);
+  }
+}
+.nav__links li {
+  margin-inline: clamp(1rem, 3vw, 2rem);
+}
+
+.nav__links a {
+  padding: 1.5rem 0;
+  color: var(--grey);
+}
+.nav__menu {
+  display: none;
+}
+/*== Home Section: Universal Styles (Mobile First) ==*/
+.home {
+  padding: 1.5rem;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  top: 35%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15%;
+}
+
+.home h1 span {
+  display: block;
+  text-transform: uppercase;
+}
+.home h1 span:nth-child(1) {
+  font-size: 1rem;
+  letter-spacing: 0.15rem;
+  margin-bottom: 1.5%;
+}
+.home h1 span:nth-child(2) {
+  font-size: 5rem;
+  font-weight: normal;
+  margin-bottom: 1.5%;
+}
+.home p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 3.5%;
+}
+.home div:nth-child(2) {
+  margin: 2rem auto 1rem auto;
+  width: 100%;
+  justify-self: start;
+}
+.home a {
+  text-transform: uppercase;
+  letter-spacing: 0.1;
+  padding: 3rem 1.25rem;
+  background-color: var(--white);
+  border-radius: 50%;
+}
+/*
+=
+= 
+=
+=
+== SMALL SCREEN MOBILE DEVICES ==*/
+@media (max-width: 300px) {
+  /*== Home Section: Small Screen Mobile Devices ==*/
+
+  .home h1 span:nth-child(1) {
+    font-size: 0.75rem;
+    letter-spacing: 0.1rem;
+  }
+  .home h1 span:nth-child(2) {
+    font-size: 3.5rem;
+  }
+  .home p {
+    font-size: 0.8rem;
+  }
+
+  .home a {
+    letter-spacing: 0.75;
+    padding: 2rem 0.75;
+  }
+}
+/*
+=
+= 
+=
+=
+== REGULAR MOBILE DEVICES ==*/
+@media (max-width: 480px) {
+  .body--home {
+    background-image: url(./assets/home/background-home-mobile.jpg);
+    max-height: 100vh;
+    overflow: hidden;
+  }
+  .body--destination {
+    background-image: url(./assets/destination/background-destination-mobile.jpg);
+  }
+  .body--crew {
+    background-image: url(./assets/crew/background-crew-mobile.jpg);
+  }
+  .body--technology {
+    background-image: url(./assets/technology/background-technology-mobile.jpg);
+  }
+  /*== Header: Regular Mobile Devices ==*/
+  .logo {
+    margin: 1.5rem;
+  }
+  .nav__links {
+    position: fixed;
+    z-index: 100;
+    height: 100vh;
+    inset: 0 0 0 30%;
+    display: flex;
+    flex-direction: column;
+    padding: min(30vh, 7.5rem) 0;
+    transform: translateX(120%);
+    transition: transform 0.5s ease-out;
+  }
+  .nav__links.display {
+    transform: translateX(0%);
+  }
+  .nav__links li {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  .nav__links span {
+    margin-right: 0.5rem;
+  }
+  .nav__links a {
+    display: flex;
+    padding-left: 2rem;
+    padding-right: 100%;
+    padding-block: 0.75rem;
+  }
+  .nav__links a:hover {
+    background-color: red;
+  }
+  .nav__menu {
+    display: flex;
+    position: absolute;
+    z-index: 200;
+    right: 2rem;
+    aspect-ratio: 1;
+    width: 1.5rem;
+    cursor: pointer;
+    background-image: url(./assets/shared/icon-hamburger.svg);
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: none;
+  }
+  .nav__menu.display {
+    background-image: url(./assets/shared/icon-close.svg);
+  }
+}
+/*
+=
+= 
+=
+=
+== TABLETS & MOBILE DEVICES ==*/
+@media (max-width: 768px) {
+  .body--home {
+    background-image: url(./assets/home/background-home-tablet.jpg);
+    max-height: 100vh;
+    overflow: hidden;
+  }
+  .body--destination {
+    background-image: url(./assets/destination/background-destination-tablet.jpg);
+  }
+  .body--crew {
+    background-image: url(./assets/crew/background-crew-tablet.jpg);
+  }
+  .body--technology {
+    background-image: url(./assets/technology/background-technology-tablet.jpg);
+  }
+}
+/*
+=
+= 
+=
+=
+== TABLETS ONLY ==*/
+@media (min-width: 481px) and (max-width: 768px) {
+  /*== Header: Tablets Only ==*/
+  .nav__links li::after {
+    content: "";
+    display: block;
+    width: 0;
+    margin: 1.25rem auto 0 auto;
+    height: 3px;
+    background-color: var(--light-tinted-white);
+    transition: 0.35s ease-out;
+  }
+  .nav__links li.active::after {
+    background-color: var(--white);
+    width: 100%;
+  }
+  .nav__links li:hover::after {
+    width: 100%;
+  }
+  .nav__links a > span {
+    display: none;
+  }
+  /*== Home Section: Tablets Only ==*/
+  .home {
+    top: 35%;
+    gap: 15%;
+  }
+  .home h1 span:nth-child(1) {
+    font-size: 1rem;
+    letter-spacing: 0.15rem;
+    margin-bottom: 1%;
+  }
+  .home h1 span:nth-child(2) {
+    font-size: 7rem;
+    margin-bottom: 1%;
+  }
+  .home p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 3%;
+    margin: auto;
+    max-width: 90%;
+  }
+  .home div:nth-child(2) {
+    margin: 2rem auto 1rem auto;
+  }
+  .home a {
+    font-size: 1.2rem;
+    letter-spacing: 0.15;
+    padding: 3.5rem 1.5rem;
+    background-color: var(--white);
+    border-radius: 50%;
+  }
+}
+/*
+=
+= 
+=
+=
+== ALL LAPTOP/DESKTOP COMPUTERS ==*/
+@media (min-width: 768px) {
+  .body--home {
+    background-image: url(./assets/home/background-home-desktop.jpg);
+    max-height: 100vh;
+    overflow: hidden;
+  }
+  .body--destination {
+    background-image: url(./assets/destination/background-destination-desktop.jpg);
+  }
+  .body--crew {
+    background-image: url(./assets/crew/background-crew-desktop.jpg);
+  }
+  .body--technology {
+    background-image: url(./assets/technology/background-technology-desktop.jpg);
+  }
+  /*== Header: All Laptop/Desktop Computers ==*/
+  .nav__links li::after {
+    content: "";
+    display: block;
+    width: 0;
+    margin: 1.25rem auto 0 auto;
+    height: 3px;
+    background-color: var(--light-tinted-white);
+    transition: 0.35s ease-out;
+  }
+  .nav__links li.active::after {
+    background-color: var(--white);
+    width: 100%;
+  }
+  .nav__links li:hover::after {
+    width: 100%;
+  }
+
+  /*== Home Section: All Laptop/Desktop Computers ==*/
+  .home {
+    padding: 10%;
+    text-align: left;
+    top: 50%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    gap: 25%;
+  }
+
+  .home h1 span:nth-child(1) {
+    margin-bottom: 2%;
+  }
+  .home h1 span:nth-child(2) {
+    font-size: 7.5rem;
+    margin-bottom: 2%;
+  }
+  .home p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 20%;
+  }
+  .home div:nth-child(1) {
+    margin: 0;
+    align-self: center;
+  }
+  .home div:nth-child(2) {
+    margin: 0;
+    align-self: center;
+  }
+  .home a {
+    font-size: 1.2rem;
+    padding: 5rem 3rem;
+  }
+}
+/*
+=
+= 
+=
+=
+== LARGE SCREEN COMPUTERS ONLY ==*/
+@media (min-width: 1024px) {
+  /*== Header: Large Screen Computers Only ==*/
+  .nav__links::before {
+    content: "";
+    background: var(--grey);
+    display: flex;
+    align-items: center;
+    height: 1px;
+    margin-top: 1rem;
+    position: absolute;
+    left: -45%;
+    top: 22%;
+    vertical-align: middle;
+    width: 20rem;
+  }
+}
