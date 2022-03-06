@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500&family=Bellefair&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Space Tourism Website</title>
+</head>
+<body class="body--destination">
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="./assets/shared/logo.svg" alt="">
+      </div>
+      
+
+      <ul class="nav__links">
+        <li><a href="./index.html" class="ff-barlow fc-white"><span aria-hidden="true" class="bold">00</span> Home</a></li>
+        <li class="active"><a href="./destination.html" class="ff-barlow fc-white"><span aria-hidden="true" class="bold">01</span> Destination</a></li>
+        <li><a href="./crew.html" class="ff-barlow fc-white"><span aria-hidden="true" class="bold">02</span> Crew</a></li>
+        <li><a href="./technology.html" class="ff-barlow fc-white"><span aria-hidden="true" class="bold">03</span> Technology</a></li>
+      </ul>
+
+      <button class="nav__menu">
+      <!--<span class="sr-only">Menu</span> -->
+      </button>
+    </nav>
+  </header>
+
+<!--DESTINATION-->
+<section class="destination slider--container" id="slider--container">
+    <article id="moon" class="slide ">
+        <div>
+          <h1 class="ff-barlow fc-white"><span class="bold">01</span> Pick your destination</h1>
+          <img src="./assets/destination/image-moon.webp" alt="">
+        </div>
+        <div>
+          <ul>
+            <li><a href="#moon" class="ff-barlow fc-grey active">Moon</a></li>
+          <li><a href="#mars" class="ff-barlow fc-grey">Mars</a></li>
+          <li><a href="#europa" class="ff-barlow fc-grey">Europa</a></li>
+          <li><a href="#titan" class="ff-barlow fc-grey">Titan</a></li>
+          </ul>
+          <h2 class="ff-bellefair fc-white">Moon</h2>
+          <p class="brief--text ff-barlow fc-grey">
+            See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.
+          </p>
+          
+            <div>
+              <div>
+                <p class="ff-barlow fc-grey">Avg. distance</p>
+                <p class="ff-bellefair fc-white">384,400 km</p>
+              </div>
+              <div>
+                <p class="ff-barlow fc-grey">Est. travel time</p>
+                <p class="ff-bellefair fc-white">3 days</p>
+              </div>
+            </div>
+          </div>
+      </article>
+    
+      <article id="mars" class="slide">
+        <div>
+          <h1 class="ff-barlow fc-white"><span class="bold">01</span> Pick your destination</h1>
+          <img src="./assets/destination/image-mars.webp" alt="">
+        </div>
+        <div>
+          <ul>
+            <li><a href="#moon" class="ff-barlow fc-white">Moon</a></li>
+            <li><a href="#mars" class="ff-barlow fc-white">Mars</a></li>
+            <li><a href="#europa" class="ff-barlow fc-white">Europa</a></li>
+            <li><a href="#titan" class="ff-barlow fc-white">Titan</a></li>
+          </ul>
+          <h2 class="ff-bellefair fc-white">Mars</h2>
+          <p class="brief--text ff-barlow fc-grey">
+            Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It’s two and a half times the size of Everest!
+          </p>
+          
+            <div>
+              <div>
+                <p class="ff-barlow fc-grey">Avg. distance</p>
+                <p class="ff-bellefair fc-white">225 mil. km</p>
+              </div>
+              <div>
+                <p class="ff-barlow fc-grey">Est. travel time</p>
+                <p class="ff-bellefair fc-white">9 months</p>
+              </div>
+            </div>
+          </div>
+      </article>
+    
+      <article id="europa" class="slide">
+        <div>
+          <h1 class="ff-barlow fc-white"><span class="bold">01</span> Pick your destination</h1>
+          <img src="./assets/destination/image-europa.webp" alt="">
+        </div>
+        <div>
+          <ul>
+            <li><a href="#moon" class="ff-barlow fc-white">Moon</a></li>
+            <li><a href="#mars" class="ff-barlow fc-white">Mars</a></li>
+            <li><a href="#europa" class="ff-barlow fc-white">Europa</a></li>
+            <li><a href="#titan" class="ff-barlow fc-white">Titan</a></li>
+          </ul>
+          <h2 class="ff-bellefair fc-white">Europa</h2>
+          <p class="brief--text ff-barlow fc-grey">
+            The smallest of the four Galilean moons orbiting Jupiter, Europa is a winter lover’s dream. With an icy surface, it’s perfect for a bit of ice skating, curling, hockey, or simple relaxation in your snug 
+            wintery cabin.
+          </p>
+          
+            <div>
+              <div>
+                <p class="ff-barlow fc-grey">Avg. distance</p>
+                <p class="ff-bellefair fc-white">628 mil. km</p>
+              </div>
+              <div>
+                <p class="ff-barlow fc-grey">Est. travel time</p>
+                <p class="ff-bellefair fc-white">3 years</p>
+              </div>
+            </div>
+        </div>
+      </article>
+    
+      <article id="titan" class="slide">
+        <div>
+          <h1 class="ff-barlow fc-white"><span class="bold">01</span> Pick your destination</h1>
+          <img src="./assets/destination/image-titan.webp" alt="">
+        </div>
+        <div>
+          <ul>
+            <li><a href="#moon" class="ff-barlow fc-white">Moon</a></li>
+            <li><a href="#mars" class="ff-barlow fc-white">Mars</a></li>
+            <li><a href="#europa" class="ff-barlow fc-white">Europa</a></li>
+            <li><a href="#titan" class="ff-barlow fc-white">Titan</a></li>
+          </ul>
+          <h2 class="ff-bellefair fc-white">Titan</h2>
+          <p class="brief--text ff-barlow fc-grey">
+            The only moon known to have a dense atmosphere other than Earth, Titan is a home away from home (just a few hundred degrees colder!). As a bonus, you get striking views of the Rings of Saturn.
+          </p>
+          
+            <div>
+              <div>
+                <p class="ff-barlow fc-grey">Avg. distance</p>
+                <p class="ff-bellefair fc-white">1.6 bil. km</p>
+              </div>
+              <div>
+                <p class="ff-barlow fc-grey">Est. travel time</p>
+                <p class="ff-bellefair fc-white">7 years</p>
+              </div>
+            </div>
+          </div>
+        </article>
+</section>
+<script src="./script.js"></script>
+</body>
+</html>
+
